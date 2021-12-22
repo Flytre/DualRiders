@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.flytre.dual_riders.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "HorseEntityMixin",
+    "HorseBaseEntityMixin",
+    "EntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

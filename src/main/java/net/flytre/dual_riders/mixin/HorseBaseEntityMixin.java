@@ -1,6 +1,5 @@
 package net.flytre.dual_riders.mixin;
 
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -46,8 +45,8 @@ public abstract class HorseBaseEntityMixin extends AnimalEntity {
             Vec3d vec3d = (new Vec3d(lengthwiseOffset, 0.0D, 0.0D)).rotateY(-this.getYaw() * 0.017453292F - 1.5707964F);
             passenger.setPosition(this.getX() + vec3d.x, this.getY() + heightwiseOffset, this.getZ() + vec3d.z);
         } else {
-            float zMultiplier = MathHelper.sin(this.bodyYaw * 0.017453292F);
-            float xMultiplier = MathHelper.cos(this.bodyYaw * 0.017453292F);
+            float zMultiplier = MathHelper.sin(this.bodyYaw * ((float) Math.PI / 180));
+            float xMultiplier = MathHelper.cos(this.bodyYaw * ((float) Math.PI / 180));
             float animationHorizontalOffset = 0.7F * this.lastAngryAnimationProgress - lengthwiseOffset;
             float animationVerticalOffset = 0.15F * this.lastAngryAnimationProgress;
             passenger.setPosition(this.getX() + (double) (animationHorizontalOffset * zMultiplier), this.getY() + heightwiseOffset + (double) animationVerticalOffset, this.getZ() - (double) (animationHorizontalOffset * xMultiplier));

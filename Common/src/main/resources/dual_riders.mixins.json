@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.flytre.dual_riders.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "HorseEntityMixin",
+    "HorseBaseEntityMixin",
+    "EntityMixin"
+  ],
+  "client": [
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "${mod_id}-${minecraft_version}-${mod_version}-${loader}-refmap.json"
+}
+  

@@ -3,8 +3,8 @@ package net.flytre.dual_riders.mixin;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.passive.AbstractHorseEntity;
 import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.passive.HorseBaseEntity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Iterator;
 
-@Mixin(HorseBaseEntity.class)
+@Mixin(AbstractHorseEntity.class)
 public abstract class HorseBaseEntityMixin extends AnimalEntity {
 
     @Shadow

@@ -1,7 +1,7 @@
 package net.flytre.dual_riders.mixin;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.passive.HorseBaseEntity;
+import net.minecraft.entity.passive.AbstractHorseEntity;
 import net.minecraft.entity.passive.HorseEntity;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -9,9 +9,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(HorseEntity.class)
-public class HorseEntityMixin extends HorseBaseEntity {
+public class HorseEntityMixin extends AbstractHorseEntity {
 
-    protected HorseEntityMixin(EntityType<? extends HorseBaseEntity> entityType, World world) {
+    protected HorseEntityMixin(EntityType<? extends AbstractHorseEntity> entityType, World world) {
         super(entityType, world);
     }
 
